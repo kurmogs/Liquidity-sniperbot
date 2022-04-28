@@ -1,0 +1,42 @@
+{
+    "name": "ax-50-deployer",
+    "version": "1.0.0",
+    "description": "EVM Liquidity Sniper Bot consuming GETH txs through mempool",
+    "main": "truffle-config.js",
+    "directories": {
+        "test": "test"
+    },
+    "dependencies": {
+        "@openzeppelin/contracts": "^3.4.1",
+        "@openzeppelin/contracts-upgradeable": "^3.4.1",
+        "@truffle/hdwallet-provider": "^1.2.6",
+        "@uniswap/v2-core": "^1.0.1",
+        "axios": "^0.21.2",
+        "dotenv": "^8.2.0",
+        "ethers": "^5.4.7"
+    },
+    "devDependencies": {
+        "@openzeppelin/test-helpers": "^0.5.11",
+        "@openzeppelin/truffle-upgrades": "^1.8.0",
+        "@truffle/config": "^1.2.41",
+        "@truffle/provider": "^0.2.32",
+        "@types/node": "^16.11.0",
+        "truffle": "^5.2.3",
+        "truffle-contract-size": "^2.0.1",
+        "truffle-export-abi": "^1.0.1",
+        "truffle-plugin-verify": "^0.5.7",
+        "yargs": "^17.0.1"
+    },
+    "scripts": {
+        "deploy": "sudo truffle migrate --reset",
+        "deploy-testnet": "sudo truffle migrate --network bsctestnet",
+        "order-preview": "ts-node scripts/order_preview.ts",
+        "create-swarm": "ts-node scripts/swarm_factory.ts",
+        "refund-swarm": "ts-node scripts/swarm_refund.ts",
+        "configure-trigger": "ts-node scripts/trigger_configurer.ts",
+        "withdraw-trigger": "ts-node scripts/trigger_withdrawal.ts"
+    },
+    "keywords": [],
+    "author": "saantiaguilera",
+    "license": "GPL-3.0"
+}
